@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abelle's 1st Birthday</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#fffaf5;
+    color:#444;
+}
+
+section{
+    padding:60px 20px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+h1,h2,h3{
+    text-align:center;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(
+        rgba(255,255,255,.7),
+        rgba(255,255,255,.7)),
+        url('images/cover.jpg');
+    background-size:cover;
+    background-position:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:3rem;
+    color:#ff7aa2;
+}
+
+.hero h2{
+    margin-top:10px;
+    color:#f7b731;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#ff7aa2;
+    color:white;
+    padding:12px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.btn:hover{
+    opacity:.9;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.details{
+    text-align:center;
+    line-height:2;
+}
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.box{
+    background:#ffd56b;
+    color:#333;
+    width:90px;
+    padding:20px;
+    border-radius:15px;
+}
+
+.number{
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+    margin-top:30px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.story{
+    text-align:center;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+iframe{
+    width:100%;
+    height:400px;
+    border:none;
+    border-radius:20px;
+}
+
+.footer{
+    text-align:center;
+    background:#ffecf2;
+    padding:40px 20px;
+}
+
+.duck{
+    font-size:50px;
+}
+
+@media(max-width:600px){
+.hero h1{
+    font-size:2.2rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+<div>
+<div style="font-size:70px;">🦆</div>
+
+<h1>Abelle's 1st Birthday</h1>
+
+<h2>Pink • White • Yellow Duck Theme</h2>
+
+<p style="margin-top:20px;">
+Dengan penuh sukacita mengundang Anda untuk merayakan
+ulang tahun pertama putri kami.
+</p>
+
+<a href="#event" class="btn">
+Open Invitation
+</a>
+
+</div>
+</section>
+
+<!-- EVENT -->
+
+<section id="event">
+
+<div class="container">
+
+<div class="card">
+
+<h2>🎂 Detail Acara</h2>
+
+<div class="details">
+
+<p><strong>Tanggal:</strong> 13 Maret 2027</p>
+
+<p><strong>Waktu:</strong> 16.00 WITA</p>
+
+<p><strong>Tempat:</strong> Bitung, Sulawesi Utara</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- COUNTDOWN -->
+
+<section style="background:#fff2cc;">
+
+<div class="container">
+
+<h2>⏳ Countdown</h2>
+
+<div class="countdown">
+
+<div class="box">
+<div id="days" class="number">0</div>
+Hari
+</div>
+
+<div class="box">
+<div id="hours" class="number">0</div>
+Jam
+</div>
+
+<div class="box">
+<div id="minutes" class="number">0</div>
+Menit
+</div>
+
+<div class="box">
+<div id="seconds" class="number">0</div>
+Detik
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STORY -->
+
+<section>
+
+<div class="container">
+
+<h2>💛 Our Little Duckling Turns One</h2>
+
+<div class="story">
+
+<p style="margin-top:20px;">
+Tak terasa satu tahun telah berlalu sejak Abelle hadir
+membawa kebahagiaan dan warna dalam keluarga kami.
+Mari berbagi sukacita bersama dalam perayaan ulang tahunnya
+yang pertama.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section style="background:#fff7fa;">
+
+<div class="container">
+
+<h2>📸 Gallery</h2>
+
+<div class="gallery">
+
+<img src="images/1.jpg">
+<img src="images/2.jpg">
+<img src="images/3.jpg">
+<img src="images/4.jpg">
+<img src="images/5.jpg">
+<img src="images/6.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MAP -->
+
+<section>
+
+<div class="container">
+
+<h2>📍 Lokasi Acara</h2>
+
+<br>
+
+<iframe
+src="https://maps.google.com/maps?q=Bitung&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+</section>
+
+<!-- RSVP -->
+
+<section style="background:#fff2cc;">
+
+<div class="container">
+
+<div class="card" style="text-align:center;">
+
+<h2>✅ RSVP</h2>
+
+<p style="margin-top:15px;">
+Mohon konfirmasi kehadiran melalui WhatsApp.
+</p>
+
+<a
+class="btn"
+href="https://wa.me/6281234567890?text=Halo,%20saya%20akan%20hadir%20di%20ulang%20tahun%20Abelle"
+target="_blank">
+
+Konfirmasi Kehadiran
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<section class="footer">
+
+<div class="duck">🦆</div>
+
+<h3>Terima Kasih</h3>
+
+<p style="margin-top:10px;">
+Kami menantikan kehadiran Anda untuk merayakan
+ulang tahun pertama Abelle.
+</p>
+
+</section>
+
+<script>
+
+const targetDate = new Date("March 13, 2027 16:00:00").getTime();
+
+const countdown = setInterval(function(){
+
+const now = new Date().getTime();
+
+const distance = targetDate - now;
+
+const days = Math.floor(distance/(1000*60*60*24));
+
+const hours = Math.floor(
+(distance%(1000*60*60*24))/(1000*60*60)
+);
+
+const minutes = Math.floor(
+(distance%(1000*60*60))/(1000*60)
+);
+
+const seconds = Math.floor(
+(distance%(1000*60))/1000
+);
+
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
+
+},1000);
+
+</script>
+
+</body>
+</html>
