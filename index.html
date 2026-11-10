@@ -813,6 +813,121 @@ font-size:14px;
 color:#777;
 
 }
+ 
+.wishes-section{
+
+padding:35px 20px;
+
+}
+
+.wishes-wrap{
+
+max-width:950px;
+margin:auto;
+
+background:white;
+
+padding:30px;
+
+border-radius:30px;
+
+box-shadow:
+0 10px 30px
+rgba(0,0,0,.08);
+
+}
+
+.wishes-form input,
+.wishes-form select,
+.wishes-form textarea{
+
+width:100%;
+
+padding:14px;
+
+margin-bottom:12px;
+
+border-radius:15px;
+
+border:1px solid #ddd;
+
+font-family:'Poppins',sans-serif;
+
+}
+
+.wishes-form textarea{
+
+min-height:120px;
+
+resize:none;
+
+}
+
+.wishes-form button{
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+border-radius:15px;
+
+background:#ff69b4;
+
+color:white;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+.wish-counter{
+
+text-align:center;
+
+margin-bottom:15px;
+
+font-weight:600;
+
+font-size:18px;
+
+}
+
+.wish-card{
+
+background:#fff9fc;
+
+border:1px solid #ffe1ef;
+
+padding:15px;
+
+border-radius:15px;
+
+margin-bottom:12px;
+
+}
+
+.wish-name{
+
+font-weight:700;
+
+color:#ff69b4;
+
+margin-bottom:5px;
+
+}
+
+.wish-status{
+
+font-size:12px;
+
+color:#777;
+
+margin-bottom:8px;
+
+}
 
 @media(max-width:768px){
 
@@ -1175,6 +1290,65 @@ Konfirmasi Kehadiran
 
 </section>
 
+<section class="wishes-section">
+
+<div class="wishes-wrap">
+
+<h2 class="section-title">
+💌 Wishes
+</h2>
+
+<div class="wish-counter">
+
+Total Ucapan:
+<span id="wishCount">0</span>
+
+</div>
+
+<form
+id="wishForm"
+class="wishes-form">
+
+<input
+type="text"
+id="wishName"
+placeholder="Nama Anda"
+required>
+
+<select id="attendance">
+
+<option value="Hadir">
+Hadir
+</option>
+
+<option value="Tidak Hadir">
+Tidak Hadir
+</option>
+
+</select>
+
+<textarea
+id="message"
+placeholder="Tuliskan doa dan ucapan untuk Abelle..."
+required></textarea>
+
+<button type="submit">
+
+Kirim Ucapan ❤️
+
+</button>
+
+</form>
+
+<br>
+
+<div id="wishList">
+</div>
+
+</div>
+
+</section>
+
 <footer>
 
 ❤️ Kel. Goga - Tangkuman ❤️
@@ -1502,6 +1676,131 @@ closeImage();
 
 }
 );
+
+</script>
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+
+import {
+getFirestore,
+collection,
+addDoc,
+query,
+orderBy,
+onSnapshot
+}
+from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+
+const firebaseConfig = {
+
+apiKey: "AIzaSyB6bgRRfHcxEKXTGa0ClkPp8wI2X4mJ_QI",
+
+authDomain: "abelle-birthday.firebaseapp.com",
+
+projectId: "abelle-birthday",
+
+storageBucket: "abelle-birthday.firebasestorage.app",
+
+messagingSenderId: "190187979188",
+
+appId: "1:190187979188:web:4b3081acdecce42f88b2e1",
+
+measurementId: "G-1XLC576QG4"
+
+};
+
+const app =
+initializeApp(firebaseConfig);
+
+const db =
+getFirestore(app);
+
+const form =
+document.getElementById("wishForm");
+
+const wishList =
+document.getElementById("wishList");
+
+const wishCount =
+document.getElementById("wishCount");
+
+form.addEventListener("submit",async(e)=>{
+
+e.preventDefault();
+
+await addDoc(
+collection(db,"wishes"),
+{
+
+name:
+document.getElementById("wishName").value,
+
+attendance:
+document.getElementById("attendance").value,
+
+message:
+document.getElementById("message").value,
+
+createdAt:
+Date.now()
+
+}
+);
+
+alert(
+"Terima kasih atas ucapan dan doanya ❤️"
+);
+
+form.reset();
+
+});
+
+const q=query(
+collection(db,"wishes"),
+orderBy("createdAt","desc")
+);
+
+onSnapshot(q,(snapshot)=>{
+
+wishList.innerHTML="";
+
+wishCount.innerText=
+snapshot.size;
+
+snapshot.forEach((doc)=>{
+
+const data=doc.data();
+
+wishList.innerHTML+=`
+
+<div class="wish-card">
+
+<div class="wish-name">
+
+${data.name}
+
+</div>
+
+<div class="wish-status">
+
+${data.attendance}
+
+</div>
+
+<div>
+
+${data.message}
+
+</div>
+
+</div>
+
+`;
+
+});
+
+});
 
 </script>
 
