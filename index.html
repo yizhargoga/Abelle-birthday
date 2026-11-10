@@ -193,4 +193,417 @@ border-radius:20px;
 transition:.3s;
 }
 
-.gallery img:hover
+.gallery img:hover{
+transform:scale(1.04);
+}
+
+/* DUCK */
+
+.duck{
+position:fixed;
+pointer-events:none;
+z-index:100;
+animation:floatDuck linear infinite;
+opacity:.9;
+}
+
+.duck1{
+left:-120px;
+top:15%;
+font-size:52px;
+animation-duration:22s;
+}
+
+.duck2{
+left:-120px;
+top:45%;
+font-size:36px;
+animation-duration:30s;
+}
+
+.duck3{
+left:-120px;
+top:75%;
+font-size:42px;
+animation-duration:26s;
+}
+
+@keyframes floatDuck{
+
+0%{
+transform:translateX(-100px);
+}
+
+100%{
+transform:translateX(calc(100vw + 200px));
+}
+
+}
+
+/* SPARKLE */
+
+.sparkle{
+position:fixed;
+pointer-events:none;
+z-index:99;
+font-size:18px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-50px);
+opacity:1;
+}
+
+100%{
+transform:translateY(110vh);
+opacity:.2;
+}
+
+}
+
+/* FOOTER */
+
+.footer{
+background:#ffeaf3;
+text-align:center;
+padding:50px 20px;
+}
+
+.music{
+position:fixed;
+bottom:15px;
+right:15px;
+z-index:999;
+}
+
+@media(max-width:768px){
+
+.hero-name{
+font-size:4rem;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="duck duck1">🦆</div>
+<div class="duck duck2">🐥</div>
+<div class="duck duck3">🐤</div>
+
+<div class="opening" id="opening">
+
+<div>
+
+<div style="font-size:60px;">🦆</div>
+
+<h1>Abelle Carmelita Goga</h1>
+
+<p>
+Syukuran Baptisan &<br>
+Perayaan Ulang Tahun Pertama
+</p>
+
+<button class="btn" onclick="openInvitation()">
+Buka Undangan
+</button>
+
+</div>
+
+</div>
+
+<audio id="bgMusic" loop controls class="music">
+<source src="music/birthday.mp3" type="audio/mpeg">
+</audio>
+
+<section class="hero">
+
+<div>
+
+<div class="hero-name">
+Abelle Carmelita Goga
+</div>
+
+<div class="hero-subtitle">
+Syukuran Baptisan & Perayaan Ulang Tahun Pertama
+</div>
+
+<div style="margin-top:20px;">
+Minggu, 22 November 2026
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="card" style="text-align:center;">
+
+<h2 class="section-title">💛 Undangan</h2>
+
+Dengan penuh syukur kepada Tuhan Yesus Kristus,<br>
+kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam acara<br>
+<b>Syukuran Baptisan</b> dan <b>Perayaan Ulang Tahun Pertama</b><br>
+putri kami tercinta.
+
+<br><br>
+
+<h2 style="color:#ff6fa1;">
+Abelle Carmelita Goga
+</h2>
+
+</div>
+
+<div class="card" style="margin-top:25px;text-align:center;">
+
+<h2 class="section-title">✝ Firman Tuhan</h2>
+
+"Biarkanlah anak-anak itu datang kepada-Ku,<br>
+jangan menghalang-halangi mereka,<br>
+sebab orang-orang yang seperti itulah yang empunya Kerajaan Allah."
+
+<br><br>
+
+<b>Markus 10:14</b>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">⛪ Syukuran Baptisan</h2>
+
+<div class="card">
+
+<b>Hari / Tanggal</b><br>
+Minggu, 22 November 2026
+
+<br><br>
+
+<b>Waktu</b><br>
+13.00 WITA - selesai
+
+<br><br>
+
+<b>Tempat</b><br>
+Rumah Opa-Oma<br>
+Kel. D. Tangkuman-Kalempouw
+
+</div>
+
+</div>
+
+</section>
+
+<section style="background:#fff6db;">
+
+<div class="container">
+
+<h2 class="section-title">🎂 Ulang Tahun Pertama</h2>
+
+<div class="card" style="text-align:center;">
+
+Perayaan ulang tahun pertama Abelle akan dirangkaikan setelah acara Syukuran Baptisan.
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">⏳ Countdown</h2>
+
+<div class="countdown">
+
+<div class="time-box">
+<div id="days" class="number">0</div>
+Hari
+</div>
+
+<div class="time-box">
+<div id="hours" class="number">0</div>
+Jam
+</div>
+
+<div class="time-box">
+<div id="minutes" class="number">0</div>
+Menit
+</div>
+
+<div class="time-box">
+<div id="seconds" class="number">0</div>
+Detik
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">📷 Galeri Foto</h2>
+
+<div class="gallery">
+
+<img src="images/1.jpg">
+<img src="images/2.jpg">
+<img src="images/3.jpg">
+<img src="images/4.jpg">
+<img src="images/5.jpg">
+<img src="images/6.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<section style="background:#fff6fb;">
+
+<div class="container">
+
+<h2 class="section-title">📍 Lokasi Acara</h2>
+
+<div class="card" style="text-align:center;">
+
+Rumah Opa-Oma<br>
+Kel. D. Tangkuman-Kalempouw
+
+<br><br>
+
+<a
+href="https://maps.app.goo.gl/9oj6S1i14oLojZGX7"
+target="_blank"
+class="btn">
+
+Buka Google Maps
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="card" style="text-align:center;">
+
+<h2 class="section-title">✅ RSVP</h2>
+
+Mohon konfirmasi kehadiran melalui WhatsApp.
+
+<br><br>
+
+<a
+href="https://wa.me/6282194452695?text=Halo,%20saya%20akan%20hadir%20di%20acara%20Abelle"
+target="_blank"
+class="btn">
+
+Konfirmasi Kehadiran
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="footer">
+
+<div style="font-size:50px;">🦆</div>
+
+<h2>Terima Kasih</h2>
+
+<p style="margin-top:10px;">
+Kehadiran dan doa Bapak/Ibu/Saudara/i akan menjadi sukacita dan berkat bagi keluarga kami.
+</p>
+
+</section>
+
+<script>
+
+function openInvitation(){
+
+document.getElementById("opening").style.display="none";
+
+document.getElementById("bgMusic").play();
+
+}
+
+const targetDate =
+new Date("November 22, 2026 13:00:00").getTime();
+
+setInterval(function(){
+
+const now=new Date().getTime();
+
+const distance=targetDate-now;
+
+document.getElementById("days").innerHTML=
+Math.floor(distance/(1000*60*60*24));
+
+document.getElementById("hours").innerHTML=
+Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("minutes").innerHTML=
+Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("seconds").innerHTML=
+Math.floor((distance%(1000*60))/1000);
+
+},1000);
+
+for(let i=0;i<20;i++){
+
+let sparkle=document.createElement("div");
+
+sparkle.className="sparkle";
+
+sparkle.innerHTML="✨";
+
+sparkle.style.left=Math.random()*100+"vw";
+
+sparkle.style.animationDuration=
+(6+Math.random()*10)+"s";
+
+sparkle.style.animationDelay=
+Math.random()*5+"s";
+
+document.body.appendChild(sparkle);
+
+}
+
+</script>
+
+</body>
+</html>
