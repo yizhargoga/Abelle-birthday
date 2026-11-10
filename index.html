@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Abelle Carmelita Goga</title>
+<title>
+Baptisan Syukur & Ulang Tahun Ke-1 Abelle Carmelita Goga
+</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta property="og:title"
+content="Baptisan Syukur & Ulang Tahun Ke-1 Abelle Carmelita Goga">
 
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:description"
+content="Kel. Goga - Tangkuman mengundang Bapak/Ibu/Saudara untuk hadir dalam acara Baptisan Syukur dan Ulang Tahun Ke-1 Abelle Carmelita Goga.">
+
+<meta property="og:image"
+content="https://yizhargoga.github.io/Abelle-birthday/images/cover.jpg">
+
+<meta property="og:url"
+content="https://yizhargoga.github.io/Abelle-birthday/">
+
+<meta property="og:type"
+content="website">
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="theme-color"
+content="#ff69b4">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
 
 <style>
 
@@ -26,7 +55,7 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#fffafc;
+background:#fff9fc;
 overflow-x:hidden;
 color:#444;
 }
@@ -34,350 +63,709 @@ color:#444;
 /* OPENING */
 
 #opening{
+
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
+
 background:
 linear-gradient(
 135deg,
-#fff0f7,
-#fff8d8
+#ffe2f1,
+#fff5c9
 );
+
 display:flex;
 justify-content:center;
 align-items:center;
+
 padding:20px;
+
 z-index:99999;
 }
 
 .opening-box{
+
+max-width:450px;
 text-align:center;
-max-width:420px;
+
 }
 
-.opening-title{
-font-family:'Baloo 2';
-font-size:38px;
-color:#ff69b4;
-line-height:1.2;
-}
+.duck-main{
 
-.opening-subtitle{
-margin-top:10px;
-font-size:18px;
-}
-
-.open-btn{
-margin-top:25px;
-background:#ff69b4;
-color:white;
-border:none;
-padding:15px 30px;
-border-radius:50px;
-font-size:16px;
-font-weight:600;
-cursor:pointer;
-box-shadow:0 8px 20px rgba(255,105,180,.35);
-}
-
-.duck-big{
 font-size:90px;
-animation:bounce 2s infinite;
+
+animation:
+bounce 2s infinite;
+
 }
 
 @keyframes bounce{
+
 50%{
 transform:translateY(-15px);
 }
+
+}
+
+.opening-title{
+
+font-family:'Baloo 2';
+
+font-size:40px;
+
+line-height:1.2;
+
+color:#ff69b4;
+
+}
+
+.opening-name{
+
+margin-top:10px;
+
+font-size:22px;
+
+font-weight:600;
+
+}
+
+.open-btn{
+
+margin-top:25px;
+
+background:#ff69b4;
+
+color:white;
+
+border:none;
+
+padding:16px 35px;
+
+border-radius:60px;
+
+cursor:pointer;
+
+font-size:16px;
+
+font-weight:600;
+
+box-shadow:
+0 8px 25px
+rgba(255,105,180,.4);
+
 }
 
 /* HERO */
 
 .hero{
+
 height:100vh;
+
 background:
 url('images/cover.jpg')
 center center/cover no-repeat;
+
 position:relative;
+
 }
 
 .hero::before{
+
 content:"";
+
 position:absolute;
+
 inset:0;
-background:rgba(0,0,0,.35);
+
+background:
+rgba(0,0,0,.40);
+
 }
 
 .hero-content{
+
 position:relative;
+
 z-index:5;
+
 height:100%;
+
 display:flex;
+
 flex-direction:column;
+
 justify-content:center;
+
 align-items:center;
+
 text-align:center;
-padding:20px;
+
 color:white;
+
+padding:20px;
+
 }
 
-.hero h1{
+.hero-content h1{
+
 font-family:'Baloo 2';
-font-size:55px;
+
+font-size:60px;
+
 line-height:1.1;
+
 }
 
-.hero p{
+.hero-content p{
+
 font-size:18px;
+
 margin-top:10px;
+
 }
 
-/* DUCK */
+/* DUCKS */
 
-.duck-run{
+.duck-container{
+
+position:fixed;
+
+left:0;
+
+right:0;
+
+bottom:0;
+
+pointer-events:none;
+
+z-index:40;
+
+}
+
+.duck{
+
 position:absolute;
-bottom:30px;
-left:-80px;
-font-size:55px;
-z-index:10;
-animation:duckrun 12s linear infinite;
+
+font-size:50px;
+
 }
 
-@keyframes duckrun{
+.duck1{
+
+animation:
+duckRun1 18s linear infinite;
+
+}
+
+.duck2{
+
+animation:
+duckRun2 25s linear infinite;
+
+}
+
+.duck3{
+
+animation:
+duckRun3 20s linear infinite;
+
+}
+
+@keyframes duckRun1{
 
 0%{
 left:-80px;
+bottom:10px;
+}
+
+50%{
+bottom:40px;
 }
 
 100%{
 left:110%;
+bottom:10px;
 }
 
 }
+
+@keyframes duckRun2{
+
+0%{
+left:110%;
+bottom:80px;
+transform:scaleX(-1);
+}
+
+100%{
+left:-80px;
+bottom:80px;
+transform:scaleX(-1);
+}
+
+}
+
+@keyframes duckRun3{
+
+0%{
+left:-80px;
+bottom:140px;
+}
+
+50%{
+transform:rotate(10deg);
+}
+
+100%{
+left:110%;
+bottom:120px;
+}
+
+}
+
+/* SPARKLES */
+
+#sparkles{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:20;
+
+}
+
+.star{
+
+position:absolute;
+
+color:#ffe867;
+
+animation:
+twinkle linear infinite;
+
+}
+
+@keyframes twinkle{
+
+0%{
+opacity:0;
+transform:scale(.5);
+}
+
+50%{
+opacity:1;
+transform:scale(1.4);
+}
+
+100%{
+opacity:0;
+transform:scale(.5);
+}
+
+}
+
+/* SECTION */
 
 section{
+
 padding:70px 20px;
+
 }
 
 .card{
-background:white;
+
 max-width:950px;
+
 margin:auto;
-border-radius:30px;
+
+background:white;
+
 padding:30px;
+
+border-radius:30px;
+
 box-shadow:
-0 10px 30px rgba(0,0,0,.08);
+0 10px 30px
+rgba(0,0,0,.08);
+
 }
 
 .section-title{
-font-family:'Baloo 2';
-font-size:38px;
-text-align:center;
-color:#ff69b4;
-margin-bottom:20px;
-}
 
-.quote{
+font-family:'Baloo 2';
+
+font-size:40px;
+
 text-align:center;
+
+color:#ff69b4;
+
+margin-bottom:20px;
+
+}
+.quote{
+
+text-align:center;
+
 line-height:1.9;
+
 font-size:18px;
+
 }
 
 .quote strong{
+
 display:block;
+
 margin-top:15px;
+
 font-size:22px;
+
 }
 
 /* EVENT */
 
 .event-box{
-background:#fff8fb;
-border:2px solid #ffd7ea;
-padding:22px;
-border-radius:20px;
+
+background:#fff9fc;
+
+border:2px solid #ffd8ea;
+
+border-radius:25px;
+
+padding:25px;
+
 margin-bottom:20px;
+
 }
 
 .event-box h3{
+
 font-family:'Baloo 2';
-font-size:28px;
+
+font-size:30px;
+
 color:#ff69b4;
+
 margin-bottom:10px;
+
 }
 
 .event-box p{
-line-height:1.8;
-}
 
-.btn{
-display:inline-block;
-background:#ff69b4;
-color:white;
-padding:14px 25px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
-margin-top:15px;
+line-height:1.9;
+
 }
 
 .center{
+
 text-align:center;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:15px 28px;
+
+background:#ff69b4;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-weight:600;
+
+margin-top:15px;
+
+box-shadow:
+0 8px 20px
+rgba(255,105,180,.25);
+
 }
 
 /* COUNTDOWN */
 
 .countdown{
+
 display:flex;
+
 justify-content:center;
-gap:12px;
+
+gap:15px;
+
 flex-wrap:wrap;
+
 }
 
 .time-card{
 
-backdrop-filter:blur(10px);
+width:100px;
 
-background:
-linear-gradient(
-135deg,
-#ffb3d9,
-#ffe790
-);
+padding:20px;
 
 border-radius:25px;
 
-width:95px;
-
-padding:18px;
-
 text-align:center;
 
+background:
+
+linear-gradient(
+135deg,
+#ffb7dd,
+#ffe48e
+);
+
 color:white;
+
+box-shadow:
+0 10px 25px
+rgba(0,0,0,.08);
+
 }
 
 .time-card span{
+
 display:block;
-font-size:30px;
+
+font-size:32px;
+
 font-weight:700;
+
 }
 
 /* GALLERY */
 
 .gallery{
+
 display:grid;
+
 grid-template-columns:
-repeat(auto-fit,minmax(150px,1fr));
+repeat(auto-fit,minmax(170px,1fr));
+
 gap:15px;
+
 }
 
 .gallery img{
+
 width:100%;
-height:220px;
+
+height:230px;
+
+border-radius:18px;
+
 object-fit:cover;
-border-radius:16px;
+
 cursor:pointer;
+
 transition:.3s;
+
+box-shadow:
+0 8px 20px
+rgba(0,0,0,.08);
+
 }
 
 .gallery img:hover{
-transform:scale(1.04);
+
+transform:scale(1.03);
+
 }
 
+/* LIGHTBOX */
+
 #lightbox{
+
 display:none;
-justify-content:center;
-align-items:center;
+
 position:fixed;
+
 top:0;
 left:0;
+
 width:100%;
 height:100%;
+
 background:rgba(0,0,0,.95);
+
+justify-content:center;
+
+align-items:center;
+
 z-index:999999;
+
 }
 
 #lightbox img{
+
 max-width:95%;
 max-height:85%;
-border-radius:18px;
+
+border-radius:20px;
+
 }
+
 .close-lightbox{
+
 position:absolute;
-top:15px;
-right:25px;
+
+top:20px;
+right:30px;
+
 color:white;
-font-size:35px;
+
+font-size:38px;
+
 cursor:pointer;
+
 }
 
 .arrow{
+
 position:absolute;
+
 top:50%;
+
 transform:translateY(-50%);
-font-size:45px;
+
+font-size:50px;
+
 color:white;
+
 cursor:pointer;
+
 user-select:none;
-padding:12px;
+
+padding:15px;
+
 }
 
 .left{
+
 left:10px;
+
 }
 
 .right{
+
 right:10px;
+
 }
 
-/* MUSIC */
+/* RSVP */
 
-.music-floating{
+.rsvp-card{
+
+text-align:center;
+
+}
+
+.rsvp-card p{
+
+line-height:1.8;
+
+}
+
+/* MUSIC BUTTON */
+
+.music-btn{
+
 position:fixed;
+
 bottom:20px;
+
 right:20px;
+
 width:60px;
+
 height:60px;
-border-radius:50%;
+
 border:none;
+
+border-radius:50%;
+
 background:#ff69b4;
+
 color:white;
-font-size:22px;
+
+font-size:24px;
+
 cursor:pointer;
+
 z-index:999;
-box-shadow:0 6px 20px rgba(0,0,0,.25);
+
+box-shadow:
+0 5px 20px
+rgba(0,0,0,.25);
+
 }
+
+/* FOOTER */
 
 footer{
+
 padding:40px 20px;
+
 text-align:center;
+
 font-size:14px;
+
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
-.hero h1{
+.hero-content h1{
+
 font-size:42px;
+
 }
 
 .section-title{
-font-size:30px;
+
+font-size:32px;
+
 }
 
 .card{
-padding:20px;
+
+padding:22px;
+
 }
 
 .time-card{
-width:80px;
+
+width:85px;
+
 }
 
 .time-card span{
-font-size:24px;
+
+font-size:26px;
+
+}
+
+.arrow{
+
+font-size:40px;
+
 }
 
 }
@@ -388,24 +776,39 @@ font-size:24px;
 
 <body>
 
+<div id="sparkles"></div>
+
+<div class="duck-container">
+
+<div class="duck duck1">🦆</div>
+
+<div class="duck duck2">🦆</div>
+
+<div class="duck duck3">🦆✨</div>
+
+</div>
+
 <div id="opening">
 
 <div class="opening-box">
 
-<div class="duck-big">🦆</div>
+<div class="duck-main">🦆</div>
 
 <div class="opening-title">
-Undangan Baptisan Syukur & Ulang Tahun Ke‑1
+Undangan Baptisan Syukur
+& Ulang Tahun Ke‑1
 </div>
 
-<div class="opening-subtitle">
+<div class="opening-name">
 Abelle Carmelita Goga
 </div>
 
 <button
 class="open-btn"
 onclick="openInvitation()">
+
 💌 Buka Undangan
+
 </button>
 
 </div>
@@ -415,8 +818,6 @@ onclick="openInvitation()">
 <div id="content" style="display:none;">
 
 <section class="hero">
-
-<div class="duck-run">🦆✨</div>
 
 <div class="hero-content">
 
@@ -478,8 +879,7 @@ Markus 10:14
 </p>
 
 <p>
-📍 Rumah Opa-Oma
-<br>
+📍 Rumah Opa-Oma<br>
 Kel. D. Tangkuman - Kalempouw
 </p>
 
@@ -500,8 +900,7 @@ Kel. D. Tangkuman - Kalempouw
 </p>
 
 <p>
-📍 Rumah Opa-Oma
-<br>
+📍 Rumah Opa-Oma<br>
 Kel. D. Tangkuman - Kalempouw
 </p>
 
@@ -511,10 +910,10 @@ Kel. D. Tangkuman - Kalempouw
 
 <a
 class="btn"
-target="_blank"
-href="https://maps.app.goo.gl/9oj6S1i14oLojZGX7">
+href="https://maps.app.goo.gl/9oj6S1i14oLojZGX7"
+target="_blank">
 
-📍 Buka Lokasi
+📍 Buka Google Maps
 
 </a>
 
@@ -585,17 +984,17 @@ Detik
 </section>
 <section>
 
-<div class="card">
+<div class="card rsvp-card">
 
 <h2 class="section-title">
 💌 RSVP
 </h2>
 
-<p style="text-align:center;">
+<p>
 
 Kehadiran dan doa dari
-Bapak/Ibu/Saudara sangat berarti
-bagi keluarga kami.
+Bapak/Ibu/Saudara merupakan
+suatu kebahagiaan bagi keluarga kami.
 
 </p>
 
@@ -604,7 +1003,7 @@ bagi keluarga kami.
 <a
 class="btn"
 target="_blank"
-href="https://wa.me/6282194452695?text=Halo%20Kel.%20Goga%20-%20Tangkuman,%20saya%20akan%20menghadiri%20acara%20Baptisan%20dan%20Ulang%20Tahun%20Ke-1%20Abelle%20Carmelita%20Goga.">
+href="https://wa.me/6282194452695?text=Halo%20Kel.%20Goga%20-%20Tangkuman,%20saya%20akan%20menghadiri%20acara%20Baptisan%20Syukur%20dan%20Ulang%20Tahun%20Ke-1%20Abelle%20Carmelita%20Goga.%20Tuhan%20memberkati.">
 
 Konfirmasi Kehadiran
 
@@ -624,6 +1023,8 @@ Konfirmasi Kehadiran
 
 </div>
 
+<!-- AUDIO -->
+
 <audio
 id="bgMusic"
 loop>
@@ -634,13 +1035,17 @@ type="audio/mpeg">
 
 </audio>
 
+<!-- FLOAT MUSIC BUTTON -->
+
 <button
-class="music-floating"
+class="music-btn"
 onclick="toggleMusic()">
 
 🎵
 
 </button>
+
+<!-- LIGHTBOX -->
 
 <div id="lightbox">
 
@@ -660,7 +1065,8 @@ onclick="prevImage()">
 
 </div>
 
-<img id="lightboxImage">
+<img
+id="lightboxImage">
 
 <div
 class="arrow right"
@@ -676,39 +1082,70 @@ onclick="nextImage()">
 
 <script>
 
-const images = [
+/* ---------- SPARKLES ---------- */
 
-'images/1.jpg',
-'images/2.jpg',
-'images/3.jpg',
-'images/4.jpg',
-'images/5.jpg',
-'images/6.jpg'
+for(let i=0;i<50;i++){
 
-];
+const star =
+document.createElement("div");
 
-let currentIndex = 0;
+star.className = "star";
+
+star.innerHTML = "✨";
+
+star.style.left =
+Math.random()*100 + "%";
+
+star.style.top =
+Math.random()*100 + "%";
+
+star.style.fontSize =
+(10 + Math.random()*18) + "px";
+
+star.style.animationDuration =
+(2 + Math.random()*4) + "s";
+
+document
+.getElementById("sparkles")
+.appendChild(star);
+
+}
+
+/* ---------- OPEN INVITATION ---------- */
 
 function openInvitation(){
 
-document.getElementById('opening').style.display='none';
+document.getElementById("opening")
+.style.display = "none";
 
-document.getElementById('content').style.display='block';
+document.getElementById("content")
+.style.display = "block";
 
-document.getElementById('bgMusic').play();
+const audio =
+document.getElementById("bgMusic");
+
+audio.play().catch(()=>{});
 
 confetti({
-particleCount:220,
+
+particleCount:250,
+
 spread:180,
+
 origin:{y:0.6}
+
 });
 
+window.scrollTo(0,0);
+
 }
+
+/* ---------- AUDIO ---------- */
 
 function toggleMusic(){
 
 const music =
-document.getElementById('bgMusic');
+document.getElementById("bgMusic");
 
 if(music.paused){
 
@@ -722,78 +1159,11 @@ music.pause();
 
 }
 
-function openImage(index){
-
-currentIndex=index;
-
-document.getElementById('lightbox').style.display='flex';
-
-document.getElementById('lightboxImage').src=images[index];
-
-}
-
-function closeImage(){
-
-document.getElementById('lightbox').style.display='none';
-
-}
-
-function nextImage(){
-
-currentIndex=(currentIndex+1)%images.length;
-
-document.getElementById('lightboxImage').src=
-images[currentIndex];
-
-}
-
-function prevImage(){
-
-currentIndex=
-(currentIndex-1+images.length)%images.length;
-
-document.getElementById('lightboxImage').src=
-images[currentIndex];
-
-}
-
-/* swipe mobile */
-
-let startX=0;
-
-document.getElementById('lightbox').addEventListener(
-'touchstart',
-e=>{
-startX=e.touches[0].clientX;
-}
-);
-
-document.getElementById('lightbox').addEventListener(
-'touchend',
-e=>{
-
-let endX=e.changedTouches[0].clientX;
-
-if(endX-startX>50){
-
-prevImage();
-
-}
-
-if(startX-endX>50){
-
-nextImage();
-
-}
-
-}
-);
-
-/* countdown */
+/* ---------- COUNTDOWN ---------- */
 
 const targetDate =
 new Date(
-'November 22, 2026 13:00:00'
+"November 22, 2026 13:00:00"
 ).getTime();
 
 setInterval(()=>{
@@ -802,21 +1172,153 @@ const now =
 new Date().getTime();
 
 const distance =
-targetDate-now;
+targetDate - now;
 
-document.getElementById('days').innerHTML=
-Math.floor(distance/(1000*60*60*24));
+if(distance < 0){
+return;
+}
 
-document.getElementById('hours').innerHTML=
-Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+document.getElementById("days")
+.innerHTML =
+Math.floor(
+distance/(1000*60*60*24)
+);
 
-document.getElementById('minutes').innerHTML=
-Math.floor((distance%(1000*60*60))/(1000*60));
+document.getElementById("hours")
+.innerHTML =
+Math.floor(
+(distance%(1000*60*60*24))
+/
+(1000*60*60)
+);
 
-document.getElementById('seconds').innerHTML=
-Math.floor((distance%(1000*60))/1000);
+document.getElementById("minutes")
+.innerHTML =
+Math.floor(
+(distance%(1000*60*60))
+/
+(1000*60)
+);
+
+document.getElementById("seconds")
+.innerHTML =
+Math.floor(
+(distance%(1000*60))
+/
+1000
+);
 
 },1000);
+
+/* ---------- GALLERY ---------- */
+
+const images = [
+
+'images/1.jpg',
+'images/2.jpg',
+'images/3.jpg',
+'images/4.jpg',
+'images/5.jpg',
+'images/6.jpg'
+
+];
+
+let currentIndex = 0;
+
+function openImage(index){
+
+currentIndex = index;
+
+document.getElementById("lightbox")
+.style.display = "flex";
+
+document.getElementById("lightboxImage")
+.src = images[index];
+
+}
+
+function closeImage(){
+
+document.getElementById("lightbox")
+.style.display = "none";
+
+}
+
+function nextImage(){
+
+currentIndex =
+(currentIndex + 1)
+% images.length;
+
+document.getElementById("lightboxImage")
+.src = images[currentIndex];
+
+}
+
+function prevImage(){
+
+currentIndex =
+(currentIndex - 1 + images.length)
+% images.length;
+
+document.getElementById("lightboxImage")
+.src = images[currentIndex];
+
+}
+
+/* ---------- SWIPE MOBILE ---------- */
+
+let startX = 0;
+
+const lightbox =
+document.getElementById("lightbox");
+
+lightbox.addEventListener(
+"touchstart",
+e => {
+
+startX =
+e.touches[0].clientX;
+
+}
+);
+
+lightbox.addEventListener(
+"touchend",
+e => {
+
+let endX =
+e.changedTouches[0].clientX;
+
+if(endX - startX > 50){
+
+prevImage();
+
+}
+
+if(startX - endX > 50){
+
+nextImage();
+
+}
+
+}
+);
+
+/* ---------- CLOSE LIGHTBOX ---------- */
+
+lightbox.addEventListener(
+"click",
+function(e){
+
+if(e.target.id === "lightbox"){
+
+closeImage();
+
+}
+
+}
+);
 
 </script>
 
