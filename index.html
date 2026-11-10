@@ -4,17 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Abelle Carmelita Goga</title>
-
-<meta property="og:title" content="Abelle Carmelita Goga | Syukuran Baptisan & Ulang Tahun Pertama">
-<meta property="og:description" content="Minggu, 22 November 2026 | 13.00 WITA - Selesai">
-<meta property="og:image" content="https://yizhargoga.github.io/Abelle-birthday/images/cover.jpg">
-<meta property="og:type" content="website">
+<title>Undangan Baptisan & Ulang Tahun Abelle Carmelita Goga</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Allura&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -24,140 +19,307 @@ padding:0;
 box-sizing:border-box;
 }
 
-body{
-font-family:'Quicksand',sans-serif;
-background:#fff8fb;
-color:#444;
+html{
+scroll-behavior:smooth;
 }
 
-.opening{
-height:100vh;
+body{
+font-family:'Quicksand',sans-serif;
+background:#fff9fb;
+color:#555;
+overflow-x:hidden;
+}
+
+/* OPENING */
+
+#opening{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(135deg,#ffd9ec,#fff9d9);
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
+z-index:99999;
 padding:20px;
-background:linear-gradient(135deg,#fff6c9,#ffe5f1);
 }
 
-.opening h1{
-font-family:'Allura',cursive;
-font-size:70px;
-color:#ff6ea7;
-margin-bottom:10px;
+.opening-content{
+max-width:500px;
 }
 
-.opening p{
-font-size:20px;
-margin-bottom:25px;
+.opening-content h1{
+font-family:'Baloo 2',cursive;
+color:#ff69b4;
+font-size:2rem;
+line-height:1.3;
 }
 
-.btn{
-display:inline-block;
-padding:15px 35px;
-background:#ff6ea7;
+.opening-content h2{
+font-family:'Baloo 2',cursive;
+color:#ff96c8;
+font-size:2.5rem;
+margin-top:10px;
+}
+
+.open-btn{
+margin-top:30px;
+padding:15px 30px;
+border:none;
+border-radius:50px;
+background:#ff69b4;
 color:white;
-text-decoration:none;
-border-radius:40px;
+font-size:18px;
 font-weight:bold;
+cursor:pointer;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
 }
+
+.duck{
+font-size:80px;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+50%{
+transform:translateY(-15px);
+}
+}
+
+/* HERO */
 
 .hero{
 height:100vh;
-background:
-linear-gradient(
-rgba(0,0,0,.3),
-rgba(0,0,0,.3)
-),
-url('images/cover.jpg');
+background:url('cover.jpg') center center/cover no-repeat;
+position:relative;
+}
 
-background-size:cover;
-background-position:center;
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.35);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+height:100%;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-color:white;
 padding:20px;
+color:white;
 }
 
-.hero-name{
-font-family:'Allura',cursive;
-font-size:90px;
+.hero-content h1{
+font-family:'Baloo 2',cursive;
+font-size:3rem;
 }
+
+.hero-content p{
+font-size:1.2rem;
+margin-top:10px;
+}
+
+.walking-duck{
+position:absolute;
+top:25px;
+font-size:60px;
+z-index:5;
+animation:walk 10s linear infinite;
+}
+
+@keyframes walk{
+0%{
+left:-60px;
+}
+100%{
+left:110%;
+}
+}
+
+/* SECTION */
 
 section{
-padding:60px 20px;
-}
-
-.container{
-max-width:900px;
-margin:auto;
+padding:70px 20px;
 }
 
 .card{
 background:white;
+max-width:900px;
+margin:auto;
 padding:30px;
-border-radius:25px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-margin-bottom:20px;
+border-radius:30px;
+box-shadow:0 10px 25px rgba(0,0,0,.06);
 }
 
-h2{
+.section-title{
+font-family:'Baloo 2',cursive;
+color:#ff69b4;
+font-size:2.2rem;
+margin-bottom:25px;
 text-align:center;
-color:#ff6ea7;
+}
+
+.quote{
+text-align:center;
+font-size:1.2rem;
+line-height:1.8;
+}
+
+.quote strong{
+display:block;
+margin-top:20px;
+font-size:1.5rem;
+}
+
+/* EVENT */
+
+.event-box{
+background:#fffafc;
+border:2px solid #ffd7ea;
+border-radius:25px;
+padding:20px;
 margin-bottom:20px;
+text-align:left;
 }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:10px;
+.event-box h3{
+text-align:center;
+margin-bottom:15px;
+font-family:'Baloo 2';
+font-size:1.6rem;
+color:#ff69b4;
 }
 
-.gallery img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:15px;
+.event-box p{
+line-height:1.8;
+font-size:1.05rem;
 }
+
+.btn{
+display:inline-block;
+margin-top:20px;
+background:#ff69b4;
+color:white;
+text-decoration:none;
+padding:15px 25px;
+border-radius:50px;
+font-weight:bold;
+}
+
+/* COUNTDOWN */
 
 .countdown{
 display:flex;
 justify-content:center;
-gap:10px;
+gap:15px;
 flex-wrap:wrap;
 }
 
 .box{
-background:#ffd84d;
+width:100px;
+background:#f7d64f;
 padding:20px;
-width:90px;
+border-radius:20px;
 text-align:center;
-border-radius:15px;
 }
 
-.box div{
-font-size:28px;
+.box span{
+display:block;
+font-size:2rem;
 font-weight:bold;
 }
 
-.footer{
-background:#ffe6f1;
-text-align:center;
-padding:40px;
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
 }
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+cursor:pointer;
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+#lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.95);
+justify-content:center;
+align-items:center;
+z-index:999999;
+}
+
+#lightbox img{
+max-width:95%;
+max-height:90%;
+border-radius:20px;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:30px;
+font-size:35px;
+color:white;
+cursor:pointer;
+}
+
+/* MUSIC */
+
+.music-player{
+text-align:center;
+}
+
+.music-player audio{
+width:90%;
+max-width:500px;
+}
+
+/* FOOTER */
+
+footer{
+padding:40px;
+text-align:center;
+font-size:14px;
+}
+
+/* MOBILE */
 
 @media(max-width:768px){
 
-.hero-name{
-font-size:60px;
+.hero-content h1{
+font-size:2.3rem;
 }
 
-.opening h1{
-font-size:55px;
+.box{
+width:85px;
 }
 
+.section-title{
+font-size:2rem;
+}
 }
 
 </style>
@@ -165,169 +327,151 @@ font-size:55px;
 
 <body>
 
-<div id="opening" class="opening">
+<!-- OPENING -->
 
-<div>
+<div id="opening">
 
-<div style="font-size:60px;">🦆</div>
+<div class="opening-content">
+
+<div class="duck">🦆</div>
+
+<h1>Undangan Baptisan Syukur & Ulang Tahun Ke-1</h1>
+
+<h2>Abelle Carmelita Goga</h2>
+
+<button class="open-btn" onclick="openInvitation()">
+💌 Buka Undangan
+</button>
+
+</div>
+
+</div>
+
+<!-- KONTEN -->
+
+<div id="main-content" style="display:none;">
+
+<section class="hero">
+
+<div class="walking-duck">🦆</div>
+
+<div class="hero-content">
 
 <h1>Abelle Carmelita Goga</h1>
 
+<p>Baptisan Syukur & Ulang Tahun Ke-1</p>
+
+<p>22 November 2026</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<div class="quote">
+“Biarkanlah anak-anak itu datang kepada-Ku, jangan menghalang-halangi mereka.”
+
+<strong>Markus 10:14</strong>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2 class="section-title">⛪ Detail Acara</h2>
+
+<div class="event-box">
+
+<h3>🙏 Acara Syukuran Baptisan</h3>
+
+<p>📅 Minggu, 22 November 2026</p>
+
+<p>🕐 13.00 WITA - selesai</p>
+
 <p>
-Syukuran Baptisan<br>
-&<br>
-Perayaan Ulang Tahun Pertama
+📍 Rumah Opa-Oma<br>
+Kel. D. Tangkuman - Kalempouw
 </p>
 
-<a href="#hero" class="btn" onclick="document.getElementById('opening').style.display='none';document.getElementById('music').play();">
-Buka Undangan
+</div>
+
+<div class="event-box">
+
+<h3>🎂 Acara Ulang Tahun Ke-1</h3>
+
+<p>📅 Minggu, 22 November 2026</p>
+
+<p>🕒 15.00 WITA - selesai</p>
+
+<p>
+📍 Rumah Opa-Oma<br>
+Kel. D. Tangkuman - Kalempouw
+</p>
+
+</div>
+
+<a class="btn"
+href="https://maps.app.goo.gl/9oj6S1i14oLojZGX7"
+target="_blank">
+📍 Buka Google Maps
 </a>
 
 </div>
 
-</div>
-
-<audio id="music" controls loop
-style="position:fixed;right:10px;bottom:10px;z-index:999;">
-<source src="music/birthday.mp3" type="audio/mpeg">
-</audio>
-
-<section id="hero" class="hero">
-
-<div>
-
-<div class="hero-name">
-Abelle Carmelita Goga
-</div>
-
-<h3>
-Syukuran Baptisan & Ulang Tahun Pertama
-</h3>
-
-</div>
-
 </section>
 
 <section>
 
-<div class="container">
-
-<div class="card">
-
-<h2>💛 Undangan</h2>
-
-<p style="text-align:center;line-height:2;">
-
-Dengan penuh syukur kepada Tuhan Yesus Kristus,
-kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam
-Syukuran Baptisan dan Perayaan Ulang Tahun Pertama putri kami tercinta.
-
-<br><br>
-
-<b>Abelle Carmelita Goga</b>
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>✝ Firman Tuhan</h2>
-
-<p style="text-align:center;line-height:2;">
-
-“Biarkanlah anak-anak itu datang kepada-Ku,
-jangan menghalang-halangi mereka.”
-
-<br><br>
-
-<b>Markus 10:14</b>
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="card">
-
-<h2>⛪ Detail Acara</h2>
-
-<p>
-
-📅 Minggu, 22 November 2026
-
-<br><br>
-
-🕐 13.00 WITA - selesai
-
-<br><br>
-
-📍 Rumah Opa-Oma<br>
-Kel. D. Tangkuman-Kalempouw
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<h2>🎂 Countdown</h2>
+<h2 class="section-title">🎂 Countdown</h2>
 
 <div class="countdown">
 
 <div class="box">
-<div id="days">0</div>
+<span id="days">0</span>
 Hari
 </div>
 
 <div class="box">
-<div id="hours">0</div>
+<span id="hours">0</span>
 Jam
 </div>
 
 <div class="box">
-<div id="minutes">0</div>
+<span id="minutes">0</span>
 Menit
 </div>
 
 <div class="box">
-<div id="seconds">0</div>
+<span id="seconds">0</span>
 Detik
 </div>
 
 </div>
 
-</div>
-
 </section>
 
 <section>
 
-<div class="container">
+<div class="card">
 
-<h2>📸 Galeri Abelle</h2>
+<h2 class="section-title">📸 Galeri Abelle</h2>
 
 <div class="gallery">
 
-<img src="images/1.jpg">
-<img src="images/2.jpg">
-<img src="images/3.jpg">
-<img src="images/4.jpg">
-<img src="images/5.jpg">
-<img src="images/6.jpg">
+<img src="1.jpg" onclick="openImg(this.src)">
+<img src="2.jpg" onclick="openImg(this.src)">
+<img src="3.jpg" onclick="openImg(this.src)">
+<img src="4.jpg" onclick="openImg(this.src)">
+<img src="5.jpg" onclick="openImg(this.src)">
+<img src="6.jpg" onclick="openImg(this.src)">
 
 </div>
 
@@ -337,63 +481,87 @@ Detik
 
 <section>
 
-<div class="container">
+<div class="card">
 
-<div class="card" style="text-align:center;">
-
-<h2>📍 Lokasi Acara</h2>
-
-<a class="btn"
-target="_blank"
-href="https://maps.app.goo.gl/9oj6S1i14oLojZGX7">
-
-Buka Google Maps
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="card" style="text-align:center;">
-
-<h2>✅ RSVP</h2>
-
-<a
-class="btn"
-target="_blank"
-href="https://wa.me/6282194452695">
-
-Konfirmasi Kehadiran
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<div class="footer">
-
-🦆
-
-<h3>Terima Kasih</h3>
+<h2 class="section-title">💌 RSVP</h2>
 
 <p>
-Kehadiran dan doa Bapak/Ibu/Saudara/i
-akan menjadi sukacita bagi keluarga kami.
+Kehadiran dan doa Bapak/Ibu/Saudara merupakan kebahagiaan bagi keluarga kami.
 </p>
+
+<a class="btn"
+href="https://wa.me/6282194451234"
+target="_blank">
+Konfirmasi Kehadiran
+</a>
 
 </div>
 
+</section>
+
+<section>
+
+<div class="music-player">
+
+<h2 class="section-title">🎵 Music</h2>
+
+<audio id="bgMusic" controls loop>
+<source src="birthday.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+</section>
+
+<footer>
+
+❤️ Terima Kasih Atas Doa dan Kehadiran Bapak/Ibu/Saudara ❤️
+
+</footer>
+
+</div>
+
+<!-- LIGHTBOX -->
+
+<div id="lightbox">
+
+<span class="close" onclick="closeImg()">✕</span>
+
+<img id="lightbox-img">
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
 <script>
+
+function openInvitation(){
+
+document.getElementById("opening").style.display="none";
+document.getElementById("main-content").style.display="block";
+
+document.getElementById("bgMusic").play();
+
+confetti({
+particleCount:250,
+spread:180,
+origin:{y:0.6}
+});
+
+}
+
+function openImg(src){
+
+document.getElementById('lightbox').style.display='flex';
+document.getElementById('lightbox-img').src=src;
+
+}
+
+function closeImg(){
+
+document.getElementById('lightbox').style.display='none';
+
+}
 
 const targetDate =
 new Date("November 22, 2026 13:00:00").getTime();
