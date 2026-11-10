@@ -115,6 +115,54 @@ font-size:22px;
 
 }
 
+/* GUEST NAME */
+
+.guest-box{
+
+margin:25px 0;
+
+padding:18px 0;
+
+border-top:
+1px solid rgba(255,255,255,.25);
+
+border-bottom:
+1px solid rgba(255,255,255,.25);
+
+}
+
+.guest-label{
+
+display:block;
+
+font-size:18px;
+
+color:#666;
+
+margin-bottom:10px;
+
+}
+
+.guest-name{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#ff69b4;
+
+text-transform:uppercase;
+
+letter-spacing:1px;
+
+line-height:1.4;
+
+word-break:break-word;
+
+}
+
+/* BUTTON */
+
 .open-btn{
 
 margin-top:25px;
@@ -231,8 +279,6 @@ opacity:0;
 
 }
 
-/* DUCK */
-
 .duck-container{
 
 position:fixed;
@@ -293,7 +339,23 @@ box-shadow:
 rgba(0,0,0,.08);
 
 }
+.card{
 
+max-width:950px;
+
+margin:auto;
+
+background:white;
+
+padding:30px;
+
+border-radius:30px;
+
+box-shadow:
+0 10px 30px
+rgba(0,0,0,.08);
+
+}
 .hero-card{
 
 margin-top:-70px;
@@ -374,6 +436,7 @@ color:#ff69b4;
 margin-bottom:20px;
 
 }
+
 .quote{
 
 text-align:center;
@@ -754,6 +817,24 @@ Undangan Ibadah Syukuran Baptisan
 Abelle Carmelita Goga
 </h2>
 
+<div class="guest-box">
+
+<div class="guest-label">
+
+Kepada Yth.
+
+</div>
+
+<div
+id="guestName"
+class="guest-name">
+
+Bapak/Ibu/Saudara/i
+
+</div>
+
+</div>
+
 <button
 class="open-btn"
 onclick="openInvitation()">
@@ -777,7 +858,7 @@ onclick="openInvitation()">
 
 <div class="hero-badge">
 
-🐥Ibadah Syukuran Baptisan &
+🐥 Ibadah Syukuran Baptisan &
 Perayaan Ulang Tahun Ke‑1
 
 </div>
@@ -853,8 +934,19 @@ Kel. D. Tangkuman - Kalempouw
 <div class="event-box">
 
 <h3>
-🎂 Perayaan Ulang Tahun Ke‑1 (Acara anak-anak)
+🎂 Perayaan Ulang Tahun Ke‑1 Abelle
 </h3>
+
+<p style="
+color:#ff69b4;
+font-style:italic;
+font-size:15px;
+margin-bottom:12px;
+line-height:1.6;">
+
+✨ Games, doorprize, dan berbagai aktivitas seru telah dipersiapkan khusus untuk anak-anak.
+
+</p>
 
 <p>
 📅 Minggu, 22 November 2026
@@ -921,7 +1013,6 @@ Detik
 </div>
 
 </section>
-
 <section>
 
 <div class="card">
@@ -957,6 +1048,7 @@ onclick="openImage(5)">
 </div>
 
 </section>
+
 <section>
 
 <div class="card rsvp-card">
@@ -1056,7 +1148,7 @@ onclick="nextImage()">
 
 <script>
 
-/* SPARKLES SEDIKIT */
+/* SPARKLES */
 
 for(let i=0;i<6;i++){
 
@@ -1082,6 +1174,27 @@ star.style.animationDuration =
 document
 .getElementById("sparkles")
 .appendChild(star);
+
+}
+
+/* NAMA TAMU OTOMATIS */
+
+const urlParams =
+new URLSearchParams(
+window.location.search
+);
+
+const guestName =
+urlParams.get('to');
+
+if(guestName){
+
+document.getElementById(
+'guestName'
+).innerText =
+decodeURIComponent(
+guestName
+);
 
 }
 
@@ -1184,7 +1297,7 @@ Math.floor(
 
 },1000);
 
-/* GALLERY */
+/* GALERI */
 
 const images=[
 
@@ -1300,5 +1413,4 @@ closeImage();
 </script>
 
 </body>
-
 </html>
