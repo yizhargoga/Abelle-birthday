@@ -4,17 +4,20 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>
-Baptisan Syukur & Ulang Tahun Ke-1 Abelle Carmelita Goga
+Baptisan Syukur & Ulang Tahun Ke‑1
+Abelle Carmelita Goga
 </title>
 
 <meta property="og:title"
-content="Baptisan Syukur & Ulang Tahun Ke-1 Abelle Carmelita Goga">
+content="Baptisan Syukur & Ulang Tahun Ke‑1 Abelle Carmelita Goga">
 
 <meta property="og:description"
-content="Kel. Goga - Tangkuman mengundang Bapak/Ibu/Saudara untuk hadir dalam acara Baptisan Syukur dan Ulang Tahun Ke-1 Abelle Carmelita Goga.">
+content="22 November 2026 • Kel. Goga - Tangkuman">
 
 <meta property="og:image"
 content="https://yizhargoga.github.io/Abelle-birthday/images/cover.jpg">
@@ -60,8 +63,6 @@ overflow-x:hidden;
 color:#444;
 }
 
-/* OPENING */
-
 #opening{
 
 position:fixed;
@@ -73,8 +74,8 @@ height:100%;
 background:
 linear-gradient(
 135deg,
-#ffe2f1,
-#fff5c9
+#ffe5f2,
+#fff7cf
 );
 
 display:flex;
@@ -84,11 +85,13 @@ align-items:center;
 padding:20px;
 
 z-index:99999;
+
 }
 
 .opening-box{
 
 max-width:450px;
+
 text-align:center;
 
 }
@@ -97,8 +100,7 @@ text-align:center;
 
 font-size:90px;
 
-animation:
-bounce 2s infinite;
+animation:bounce 2s infinite;
 
 }
 
@@ -136,29 +138,26 @@ font-weight:600;
 
 margin-top:25px;
 
+padding:16px 32px;
+
 background:#ff69b4;
 
 color:white;
 
 border:none;
 
-padding:16px 35px;
-
-border-radius:60px;
+border-radius:50px;
 
 cursor:pointer;
 
-font-size:16px;
-
 font-weight:600;
 
+font-size:16px;
+
 box-shadow:
-0 8px 25px
-rgba(255,105,180,.4);
+0 8px 20px rgba(255,105,180,.35);
 
 }
-
-/* HERO */
 
 .hero{
 
@@ -181,7 +180,7 @@ position:absolute;
 inset:0;
 
 background:
-rgba(0,0,0,.40);
+rgba(0,0,0,.18);
 
 }
 
@@ -189,7 +188,7 @@ rgba(0,0,0,.40);
 
 position:relative;
 
-z-index:5;
+z-index:10;
 
 height:100%;
 
@@ -197,15 +196,19 @@ display:flex;
 
 flex-direction:column;
 
-justify-content:center;
+justify-content:flex-end;
 
 align-items:center;
 
 text-align:center;
 
-color:white;
+padding-bottom:80px;
 
-padding:20px;
+padding-left:20px;
+
+padding-right:20px;
+
+color:white;
 
 }
 
@@ -213,15 +216,29 @@ padding:20px;
 
 font-family:'Baloo 2';
 
-font-size:60px;
+font-size:55px;
 
-line-height:1.1;
+background:
+rgba(255,255,255,.15);
+
+backdrop-filter:blur(10px);
+
+padding:12px 24px;
+
+border-radius:20px;
 
 }
 
 .hero-content p{
 
-font-size:18px;
+background:
+rgba(255,255,255,.12);
+
+backdrop-filter:blur(10px);
+
+padding:8px 18px;
+
+border-radius:15px;
 
 margin-top:10px;
 
@@ -234,14 +251,12 @@ margin-top:10px;
 position:fixed;
 
 left:0;
-
 right:0;
-
 bottom:0;
 
 pointer-events:none;
 
-z-index:40;
+z-index:50;
 
 }
 
@@ -249,79 +264,61 @@ z-index:40;
 
 position:absolute;
 
-font-size:50px;
+font-size:42px;
+
+filter:
+drop-shadow(
+0 4px 10px rgba(0,0,0,.2)
+);
 
 }
 
 .duck1{
-
-animation:
-duckRun1 18s linear infinite;
-
+animation:duckWalk1 20s linear infinite;
 }
 
 .duck2{
-
-animation:
-duckRun2 25s linear infinite;
-
+animation:duckWalk2 25s linear infinite;
 }
 
-.duck3{
-
-animation:
-duckRun3 20s linear infinite;
-
-}
-
-@keyframes duckRun1{
+@keyframes duckWalk1{
 
 0%{
-left:-80px;
-bottom:10px;
+left:-50px;
+bottom:15px;
+}
+
+25%{
+bottom:25px;
 }
 
 50%{
-bottom:40px;
+bottom:15px;
+}
+
+75%{
+bottom:28px;
 }
 
 100%{
 left:110%;
-bottom:10px;
+bottom:15px;
 }
 
 }
 
-@keyframes duckRun2{
+@keyframes duckWalk2{
 
 0%{
 left:110%;
-bottom:80px;
+bottom:60px;
 transform:scaleX(-1);
 }
 
 100%{
-left:-80px;
-bottom:80px;
+left:-50px;
+bottom:60px;
 transform:scaleX(-1);
-}
-
-}
-
-@keyframes duckRun3{
-
-0%{
-left:-80px;
-bottom:140px;
-}
-
-50%{
-transform:rotate(10deg);
-}
-
-100%{
-left:110%;
-bottom:120px;
 }
 
 }
@@ -366,7 +363,7 @@ transform:scale(.5);
 
 50%{
 opacity:1;
-transform:scale(1.4);
+transform:scale(1.2);
 }
 
 100%{
@@ -376,43 +373,24 @@ transform:scale(.5);
 
 }
 
-/* SECTION */
-
 section{
-
 padding:70px 20px;
-
 }
 
 .card{
 
+background:white;
+
 max-width:950px;
 
 margin:auto;
-
-background:white;
 
 padding:30px;
 
 border-radius:30px;
 
 box-shadow:
-0 10px 30px
-rgba(0,0,0,.08);
-
-}
-
-.section-title{
-
-font-family:'Baloo 2';
-
-font-size:40px;
-
-text-align:center;
-
-color:#ff69b4;
-
-margin-bottom:20px;
+0 10px 30px rgba(0,0,0,.08);
 
 }
 .quote{
@@ -780,11 +758,9 @@ font-size:40px;
 
 <div class="duck-container">
 
-<div class="duck duck1">🦆</div>
+<div class="duck duck1">🐥</div>
 
-<div class="duck duck2">🦆</div>
-
-<div class="duck duck3">🦆✨</div>
+<div class="duck duck2">🐤</div>
 
 </div>
 
@@ -792,7 +768,7 @@ font-size:40px;
 
 <div class="opening-box">
 
-<div class="duck-main">🦆</div>
+<div class="duck-main">🐥</div>
 
 <div class="opening-title">
 Undangan Baptisan Syukur
@@ -966,15 +942,10 @@ Detik
 <div class="gallery">
 
 <img src="images/1.jpg" onclick="openImage(0)">
-
 <img src="images/2.jpg" onclick="openImage(1)">
-
 <img src="images/3.jpg" onclick="openImage(2)">
-
 <img src="images/4.jpg" onclick="openImage(3)">
-
 <img src="images/5.jpg" onclick="openImage(4)">
-
 <img src="images/6.jpg" onclick="openImage(5)">
 
 </div>
@@ -1035,7 +1006,7 @@ type="audio/mpeg">
 
 </audio>
 
-<!-- FLOAT MUSIC BUTTON -->
+<!-- FLOATING MUSIC BUTTON -->
 
 <button
 class="music-btn"
@@ -1082,28 +1053,30 @@ onclick="nextImage()">
 
 <script>
 
-/* ---------- SPARKLES ---------- */
+/* =========================
+   SPARKLES (DIKURANGI)
+========================= */
 
-for(let i=0;i<50;i++){
+for(let i=0;i<15;i++){
 
 const star =
 document.createElement("div");
 
-star.className = "star";
+star.className="star";
 
-star.innerHTML = "✨";
+star.innerHTML="✨";
 
 star.style.left =
-Math.random()*100 + "%";
+Math.random()*100+"%";
 
 star.style.top =
-Math.random()*100 + "%";
+Math.random()*100+"%";
 
 star.style.fontSize =
-(10 + Math.random()*18) + "px";
+(8+Math.random()*12)+"px";
 
 star.style.animationDuration =
-(2 + Math.random()*4) + "s";
+(3+Math.random()*5)+"s";
 
 document
 .getElementById("sparkles")
@@ -1111,26 +1084,28 @@ document
 
 }
 
-/* ---------- OPEN INVITATION ---------- */
+/* =========================
+   OPEN INVITATION
+========================= */
 
 function openInvitation(){
 
 document.getElementById("opening")
-.style.display = "none";
+.style.display="none";
 
 document.getElementById("content")
-.style.display = "block";
+.style.display="block";
 
-const audio =
+const music =
 document.getElementById("bgMusic");
 
-audio.play().catch(()=>{});
+music.play().catch(()=>{});
 
 confetti({
 
-particleCount:250,
+particleCount:180,
 
-spread:180,
+spread:160,
 
 origin:{y:0.6}
 
@@ -1140,7 +1115,9 @@ window.scrollTo(0,0);
 
 }
 
-/* ---------- AUDIO ---------- */
+/* =========================
+   MUSIC
+========================= */
 
 function toggleMusic(){
 
@@ -1159,14 +1136,16 @@ music.pause();
 
 }
 
-/* ---------- COUNTDOWN ---------- */
+/* =========================
+   COUNTDOWN
+========================= */
 
 const targetDate =
 new Date(
 "November 22, 2026 13:00:00"
 ).getTime();
 
-setInterval(()=>{
+setInterval(() => {
 
 const now =
 new Date().getTime();
@@ -1187,7 +1166,8 @@ distance/(1000*60*60*24)
 document.getElementById("hours")
 .innerHTML =
 Math.floor(
-(distance%(1000*60*60*24))
+(distance %
+(1000*60*60*24))
 /
 (1000*60*60)
 );
@@ -1195,7 +1175,8 @@ Math.floor(
 document.getElementById("minutes")
 .innerHTML =
 Math.floor(
-(distance%(1000*60*60))
+(distance %
+(1000*60*60))
 /
 (1000*60)
 );
@@ -1203,14 +1184,17 @@ Math.floor(
 document.getElementById("seconds")
 .innerHTML =
 Math.floor(
-(distance%(1000*60))
+(distance %
+(1000*60))
 /
 1000
 );
 
 },1000);
 
-/* ---------- GALLERY ---------- */
+/* =========================
+   GALLERY
+========================= */
 
 const images = [
 
@@ -1227,46 +1211,54 @@ let currentIndex = 0;
 
 function openImage(index){
 
-currentIndex = index;
+currentIndex=index;
 
-document.getElementById("lightbox")
-.style.display = "flex";
+document
+.getElementById("lightbox")
+.style.display="flex";
 
-document.getElementById("lightboxImage")
-.src = images[index];
+document
+.getElementById("lightboxImage")
+.src=images[currentIndex];
 
 }
 
 function closeImage(){
 
-document.getElementById("lightbox")
-.style.display = "none";
+document
+.getElementById("lightbox")
+.style.display="none";
 
 }
 
 function nextImage(){
 
 currentIndex =
-(currentIndex + 1)
+(currentIndex+1)
 % images.length;
 
-document.getElementById("lightboxImage")
-.src = images[currentIndex];
+document
+.getElementById("lightboxImage")
+.src=images[currentIndex];
 
 }
 
 function prevImage(){
 
 currentIndex =
-(currentIndex - 1 + images.length)
+(currentIndex-1+
+images.length)
 % images.length;
 
-document.getElementById("lightboxImage")
-.src = images[currentIndex];
+document
+.getElementById("lightboxImage")
+.src=images[currentIndex];
 
 }
 
-/* ---------- SWIPE MOBILE ---------- */
+/* =========================
+   SWIPE MOBILE
+========================= */
 
 let startX = 0;
 
@@ -1275,7 +1267,7 @@ document.getElementById("lightbox");
 
 lightbox.addEventListener(
 "touchstart",
-e => {
+e=>{
 
 startX =
 e.touches[0].clientX;
@@ -1285,7 +1277,7 @@ e.touches[0].clientX;
 
 lightbox.addEventListener(
 "touchend",
-e => {
+e=>{
 
 let endX =
 e.changedTouches[0].clientX;
@@ -1305,13 +1297,15 @@ nextImage();
 }
 );
 
-/* ---------- CLOSE LIGHTBOX ---------- */
+/* =========================
+   CLOSE LIGHTBOX
+========================= */
 
 lightbox.addEventListener(
 "click",
 function(e){
 
-if(e.target.id === "lightbox"){
+if(e.target.id==="lightbox"){
 
 closeImage();
 
