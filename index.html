@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Abelle's 1st Birthday</title>
+<title>Abelle Carmelita Goga</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -24,14 +24,10 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:'Poppins',sans-serif;
+font-family:'Nunito',sans-serif;
 background:#fffafc;
 color:#444;
 overflow-x:hidden;
-}
-
-h1,h2,h3{
-font-family:'Playfair Display',serif;
 }
 
 section{
@@ -43,15 +39,26 @@ max-width:1000px;
 margin:auto;
 }
 
+h2,h3{
+font-family:'Cormorant Garamond',serif;
+}
+
+.section-title{
+text-align:center;
+color:#ff6fa1;
+margin-bottom:30px;
+font-size:2.5rem;
+}
+
 .btn{
 display:inline-block;
-padding:14px 32px;
+padding:14px 30px;
 border-radius:50px;
 text-decoration:none;
-font-weight:600;
-background:#ff74a8;
+background:#ff75aa;
 color:white;
-box-shadow:0 8px 25px rgba(255,116,168,.35);
+font-weight:700;
+box-shadow:0 10px 25px rgba(255,117,170,.35);
 transition:.3s;
 }
 
@@ -59,16 +66,19 @@ transition:.3s;
 transform:translateY(-3px);
 }
 
+/* OPENING */
+
 .opening{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100vh;
-background:linear-gradient(
+background:
+linear-gradient(
 135deg,
-#fff6d6,
-#ffe8f1
+#fff7d6,
+#ffe7f1
 );
 z-index:9999;
 display:flex;
@@ -78,14 +88,18 @@ text-align:center;
 padding:20px;
 }
 
-.opening-content h1{
-font-size:2.5rem;
-color:#ff74a8;
+.opening h1{
+font-family:'Great Vibes',cursive;
+font-size:4rem;
+color:#ff75aa;
+margin-bottom:15px;
 }
 
-.opening-content p{
-margin:15px 0;
+.opening p{
+margin-bottom:25px;
 }
+
+/* HERO */
 
 .hero{
 height:100vh;
@@ -95,60 +109,64 @@ rgba(0,0,0,.35),
 rgba(0,0,0,.35)
 ),
 url('images/cover.jpg');
-
 background-size:cover;
 background-position:center;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
 color:white;
 }
 
-.hero h1{
-font-size:3.4rem;
-margin-bottom:10px;
+.hero-name{
+font-family:'Great Vibes',cursive;
+font-size:6rem;
+text-shadow:0 4px 15px rgba(0,0,0,.45);
+animation:fadeUp 2s ease;
 }
 
-.hero h2{
-font-size:1.4rem;
-font-weight:400;
+.hero-subtitle{
+font-size:1.3rem;
+margin-top:10px;
+font-weight:600;
 }
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* CARD */
 
 .card{
 background:white;
 border-radius:25px;
 padding:35px;
 box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-.card p{
 line-height:1.8;
 }
 
-.event-box{
-margin-top:20px;
-padding:20px;
-border-radius:20px;
-background:#fff7e3;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:30px;
-color:#ff74a8;
-}
+/* COUNTDOWN */
 
 .countdown{
 display:flex;
 justify-content:center;
-gap:15px;
 flex-wrap:wrap;
+gap:15px;
 }
 
 .time-box{
+background:#ffd84c;
 width:95px;
-background:#ffd94f;
 padding:18px;
 border-radius:20px;
 text-align:center;
@@ -156,8 +174,10 @@ text-align:center;
 
 .number{
 font-size:30px;
-font-weight:700;
+font-weight:bold;
 }
+
+/* GALLERY */
 
 .gallery{
 display:grid;
@@ -167,330 +187,10 @@ gap:15px;
 
 .gallery img{
 width:100%;
-height:280px;
+height:270px;
 object-fit:cover;
 border-radius:20px;
 transition:.3s;
 }
 
-.gallery img:hover{
-transform:scale(1.03);
-}
-
-.map-box{
-text-align:center;
-}
-
-.footer{
-background:#ffe9f3;
-text-align:center;
-padding:50px 20px;
-}
-
-.music{
-position:fixed;
-bottom:20px;
-right:20px;
-z-index:999;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:2.4rem;
-}
-
-.hero h2{
-font-size:1.1rem;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="opening" id="opening">
-
-<div class="opening-content">
-
-<div style="font-size:70px;">🦆</div>
-
-<h1>Abelle's 1st Birthday</h1>
-
-<p>
-Syukuran Baptisan &
-Perayaan Ulang Tahun Pertama
-</p>
-
-<button class="btn" onclick="openInvitation()">
-Buka Undangan
-</button>
-
-</div>
-
-</div>
-
-<audio id="bgMusic" loop class="music" controls>
-<source src="music/birthday.mp3" type="audio/mpeg">
-</audio>
-
-<section class="hero">
-
-<div>
-
-<div style="font-size:60px;">🦆</div>
-
-<h1>Abelle's 1st Birthday</h1>
-
-<h2>
-Celebrating One Year of Love
-</h2>
-
-<p style="margin-top:20px;">
-Minggu, 22 November 2026
-</p>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="card">
-
-<h2 class="section-title">
-💛 Undangan
-</h2>
-
-<p style="text-align:center;">
-
-Dengan penuh syukur kepada Tuhan Yesus Kristus,
-kami mengundang Bapak/Ibu/Saudara/i untuk hadir
-dalam acara Syukuran Baptisan dan Perayaan
-Ulang Tahun Pertama putri kami tercinta.
-
-<br><br>
-
-<b>ABELLE</b>
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<h2 class="section-title">
-⛪ Syukuran Baptisan
-</h2>
-
-<div class="card event-box">
-
-<p><b>Hari/Tanggal</b><br>Minggu, 22 November 2026</p>
-
-<br>
-
-<p><b>Waktu</b><br>13.00 WITA - selesai</p>
-
-</div>
-
-<br>
-
-<h2 class="section-title">
-🎂 Perayaan Ulang Tahun Pertama
-</h2>
-
-<div class="card event-box">
-
-<p>
-Dirangkaikan setelah acara
-Syukuran Baptisan.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section style="background:#fff7e6;">
-
-<div class="container">
-
-<h2 class="section-title">
-⏳ Countdown
-</h2>
-
-<div class="countdown">
-
-<div class="time-box">
-<div id="days" class="number">0</div>
-Hari
-</div>
-
-<div class="time-box">
-<div id="hours" class="number">0</div>
-Jam
-</div>
-
-<div class="time-box">
-<div id="minutes" class="number">0</div>
-Menit
-</div>
-
-<div class="time-box">
-<div id="seconds" class="number">0</div>
-Detik
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<h2 class="section-title">
-📸 Galeri Foto
-</h2>
-
-<div class="gallery">
-
-<img src="images/1.jpg">
-<img src="images/2.jpg">
-<img src="images/3.jpg">
-<img src="images/4.jpg">
-<img src="images/5.jpg">
-<img src="images/6.jpg">
-
-</div>
-
-</div>
-
-</section>
-
-<section style="background:#fff7fa;">
-
-<div class="container">
-
-<h2 class="section-title">
-📍 Lokasi Acara
-</h2>
-
-<div class="map-box">
-
-<p>
-Rumah Opa-Oma<br>
-Kel. D. Tangkuman-Kalempouw
-</p>
-
-<br>
-
-<a
-class="btn"
-target="_blank"
-href="https://maps.app.goo.gl/9oj6S1i14oLojZGX7">
-
-Buka Google Maps
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="card" style="text-align:center;">
-
-<h2 class="section-title">
-✅ RSVP
-</h2>
-
-<p>
-Mohon konfirmasi kehadiran melalui WhatsApp.
-</p>
-
-<br>
-
-<a
-class="btn"
-target="_blank"
-href="https://wa.me/6282194452695?text=Halo,%20saya%20akan%20hadir%20di%20acara%20Abelle">
-
-Konfirmasi Kehadiran
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="footer">
-
-<div style="font-size:55px;">🦆</div>
-
-<h2>Terima Kasih</h2>
-
-<p style="margin-top:15px;">
-Kehadiran serta doa Bapak/Ibu/Saudara/i
-akan menjadi sukacita dan berkat bagi keluarga kami.
-</p>
-
-</section>
-
-<script>
-
-function openInvitation() {
-
-document.getElementById("opening").style.display="none";
-
-document.getElementById("bgMusic").play();
-
-}
-
-const targetDate =
-new Date("November 22, 2026 13:00:00").getTime();
-
-setInterval(function(){
-
-const now = new Date().getTime();
-
-const distance = targetDate - now;
-
-document.getElementById("days").innerHTML =
-Math.floor(distance/(1000*60*60*24));
-
-document.getElementById("hours").innerHTML =
-Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-
-document.getElementById("minutes").innerHTML =
-Math.floor((distance%(1000*60*60))/(1000*60));
-
-document.getElementById("seconds").innerHTML =
-Math.floor((distance%(1000*60))/1000);
-
-},1000);
-
-</script>
-
-</body>
-</html>
+.gallery img:hover
